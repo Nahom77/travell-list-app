@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: sans-serif;
+  color: #9fb9c2;
+  font-family: 'Quicksand';
+  font-weight: 500;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+h1 {
+  text-align: center;
+  background-color: #0f2027;
+  font-family: 'Monoton';
+  font-size: clamp(4rem, calc(4rem + 3vw), 8rem);
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 0;
+}
+
+.add-form {
+  background-color: #203a43;
+  padding: 2.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  /* box-shadow: rgba(255, 255, 255, 0.671) 0px 5px 15px; */
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px,
+    rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.form-controlls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  gap: 0.8rem;
+}
+
+h3 {
+  margin-right: 1.6rem;
+  font-size: clamp(1.5rem, calc(1.5rem + 1vw), 2.4rem);
+  text-align: center;
+}
+
+button,
+select,
+input {
+  background-color: #0f2027;
+  color: #97897b;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  /* box-shadow: rgba(182, 179, 179, 0.671) 0px 0.1px 5px; */
+}
+
+.add-form button {
+  text-transform: uppercase;
+  background-color: #5f7982;
+  color: black;
+  /* width: 100%; */
+}
+
+.list {
+  /* background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); */
+  /* background-color: #5a3e2b; */
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #ffffff;
+
+  padding: 4rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.actions button,
+.list select {
+  text-transform: uppercase;
+  padding: 0.8rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0.8rem;
+}
+
+.list ul {
+  list-style: none;
+  width: 80%;
+  overflow: scroll;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  justify-content: center;
+  align-content: start;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+input[type='checkbox'] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: #e5771f;
+}
+
+.list li button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.8rem;
+  padding: 0.8rem;
+  transform: translateY(2px);
+}
+
+.stats {
+  background-color: #2c5364;
+  color: #0f2027;
+  font-size: clamp(1.5rem, calc(1.5rem + 1vw), 2.4rem);
+  text-align: center;
+  font-weight: 700;
+  padding: 3.2rem 0;
+  box-shadow: rgba(182, 179, 179, 0.671) 0px 5px 15px;
+}
+
+/* ////////////////////// */
+@media (max-width: 700px) {
+  .add-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 532px) {
+  button,
+  select,
+  input {
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  .form-controlls {
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .form-controlls input {
+    flex: 1 1 1rem;
+  }
+
+  .form-controlls select {
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .add-form button {
+    width: 100%;
+    /* margin: 0 4rem; */
+  }
+}
